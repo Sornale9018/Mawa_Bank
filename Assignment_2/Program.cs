@@ -32,6 +32,11 @@ namespace Assignment_2
 
                     case 2:
                         ourBank.Transaction(2);
+                        switch(mawaa)
+                        {
+                            case 1:
+                                ourBank.Transaction(1);
+                        }
                         break;
 
                     case 3:
