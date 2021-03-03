@@ -10,6 +10,9 @@ namespace Assignment_2
     {
         private int accountNumber;
         private string accountName;
+        private int date;
+        private int month;
+        private int year;
         private double balance;
         private Address address;
         static int a = 39353;
@@ -29,13 +32,47 @@ namespace Assignment_2
             get { return this.accountNumber; }
         }
 
-        public int Print()
+        public int Date
+        {
+            set { this.date = value; }
+            get { return this.date; }
+        }
+
+        public int Month
+        {
+            set { this.month = value; }
+            get { return this.month; }
+        }
+
+        public int Year
+        {
+            set { this.year = value; }
+            get { return this.year; }
+        }
+
+        public int PrintAccountNumber()
         {
             accountNumber = a;
             Console.WriteLine("Your Account No is= " + accountNumber + "\n");
             a++;
             return 0;
         }
+
+        public void PrintDateOfBirth()
+        {
+            //Console.WriteLine("Your Date of Birth is=", Date,"-",Month,"-",Year);
+            Console.Write("Your Date of Birth is=");
+            Console.Write(date);
+            Console.Write("-");
+            Console.Write(month);
+            Console.Write("-");
+            Console.Write(year);
+            Console.WriteLine();
+        }
+
+
+
+
         public string AccountName
         {
             set { this.accountName = value; }
