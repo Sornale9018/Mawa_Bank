@@ -16,52 +16,86 @@ namespace Assignment_2
             //Console.Write("Enter Your Choice");
 
             bool mawa = true;
+            
             while (mawa)
             {
-                ourBank.Operation();
 
-                int mawaa = Convert.ToInt32(Console.ReadLine());
+               ourBank.Operation();
+                
+                string mawaa = Console.ReadLine();
+                
                 switch (mawaa)
                 {
-                    case 1:
-
-                        Account a1 = new Account(new Address());
-                        ourBank.AddAccount(a1);
-                        break;
-
-
-                    case 2:
-                        ourBank.Transaction(2);
-                        switch(mawaa)
+                    case "open":
+                          
+                            Account a1 = new Account(new Address());
+                            ourBank.AddAccount(a1);
+                            break;
+                        
+                    case "account":
+                                                                      
+                        bool mawaaa = true;
+                        while (mawaaa)
                         {
-                            case 1:
-                                ourBank.Transaction(1);
+                            ourBank.Operations();
+                            string mawa2 = Console.ReadLine();
+
+                            //mawa = false;
+                            switch (mawa2)
+                            {
+
+                                case "deposit":
+                                    {
+                                        ourBank.Transaction(1);
+
+                                        break;    
+                                    }
+                                    
+                                    
+                                case "withdraw":
+                                    {
+                                        ourBank.Transaction(2);
+                                        break;
+                                    }
+                                case "transfer":
+                                    {
+                                        ourBank.Transaction(3);
+                                        break;
+                                    }
+
+                                case "show":
+                                    ourBank.PrintAllAccount();
+                                    break;
+
+                                case "change":
+                                    {
+                                        Account a2 = new Account(new Address());
+                                        ourBank.AddAccount(2,a2);
+                                        break;
+                                    }
+                                case "quit":
+                                    mawaaa = false;
+                                    break;
+
+                            }
+                            
+
                         }
-                        break;
+                               break;
 
-                    case 3:
-                        ourBank.Transaction(3);
-                        break;
 
-                    case 4:
-                        ourBank.Transaction(4);
-                        break;
-
-                    case 5:
-
-                        //ourBank.Deleteccount(accountNumber);
-                        break;
-
-                    case 6:
-                        ourBank.PrintAllAccount();
-                        break;
-
-                    case 7:
+                       case "quit":
                         mawa = false;
                         break;
+                        
+                        
+                       
 
-                    default:
-                        break;
+
+                                        
+
+
+                    
 
 
                 }

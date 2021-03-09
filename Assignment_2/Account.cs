@@ -16,7 +16,7 @@ namespace Assignment_2
         private double balance;
         private Address address;
         static int a = 39353;
-
+        public int count = 0;
 
         public Account()
         { }
@@ -99,7 +99,6 @@ namespace Assignment_2
                 Console.WriteLine("Deposit Amount: " + amount);
                 balance = amount + balance;
                 Console.WriteLine("Current Balance: " + balance + "\n");
-
 
             }
             else
